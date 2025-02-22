@@ -11,3 +11,7 @@ with col2:
     st.title("Utkarsh")
     content = """ Hi, I am Utkarsh. I am a python programmer and automation tester."""
     st.info(content)
+
+content2 = """ Below you can find some of the applications I have built using Python. Feel free to contact me! """
+st.write(content2)
+
