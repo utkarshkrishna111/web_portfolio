@@ -3,3 +3,4 @@
 Lib
 venv
 .idea
+pyvenv.cfg
