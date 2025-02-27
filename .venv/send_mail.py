@@ -1,15 +1,17 @@
 import smtplib
 import ssl
-
+import os
+import certifi
+context = ssl.create_default_context(cafile=certifi.where())
 
 def mail_sender(message = "Hello"):
     host = "smtp.gmail.com"
     port = 465
 
-    user_name = "utkarsh.09914021@gmail.com"
-    password = "lcvb cxmp kagb lnoj"
+    user_name = os.getenv("USER_NAME_1")
+    password = os.getenv("PASSWORD")
 
-    receiver = "utkarsh.09914021@gmail.com"
+    receiver = os.getenv("USER_NAME_1")
     context = ssl.create_default_context()
 
     with smtplib.SMTP_SSL(host, port, context=context) as server:
